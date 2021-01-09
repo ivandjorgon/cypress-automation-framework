@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ivandjorgon/cypress-automation-framework/issues"
   },
-  "homepage": "https://github.com/ivandjorgon/cypress-automation-framework#readme"
+  "homepage": "https://github.com/ivandjorgon/cypress-automation-framework#readme",
+  "devDependencies": {
+    "cypress": "^6.2.1"
+  }
 }
