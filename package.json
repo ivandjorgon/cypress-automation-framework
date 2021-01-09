@@ -1,0 +1,19 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivandjorgon/cypress-automation-framework.git"
+  },
+  "author": "Ivan Djorgon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivandjorgon/cypress-automation-framework/issues"
+  },
+  "homepage": "https://github.com/ivandjorgon/cypress-automation-framework#readme"
+}
