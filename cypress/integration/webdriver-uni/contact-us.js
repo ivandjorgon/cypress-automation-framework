@@ -13,7 +13,6 @@ describe("Test Contact Us form via WebdriverUni", () => {
     })
 
     it("Should not be able to submit a successful submission via contact us form as all fields are mandatory", () => {
-        //cypress code
         cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html")
         cy.get('[name="first_name"]').type("Ivan")
         cy.get('[name="email"]').type("testemail@testemail.com")
