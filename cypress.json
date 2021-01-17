@@ -1,4 +1,11 @@
 {
   "chromeWebSecurity": false,
-  "projectId": "9gexbp"
+  "defaultCommandTimeout": 10000,
+  "pageLoadTimeout": 30000,
+  "ignoreTestFiles": "**/other/*",
+  "projectId": "9gexbp",
+
+  "env": {
+      "first_name": "sarah"
+  }
 }
