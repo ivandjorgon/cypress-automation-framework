@@ -37,5 +37,16 @@ describe("Alias and invoke", () => {
             itemsTotal += totalPrice;
             cy.log("Non sale price items total: " + totalPrice);
         })
+
+        cy.get('@saleItemPrice').then($linkText => {
+            var saleItemsPrice = 0;
+            var saleItemPrice = $linkText.split('$');
+            var i;
+            for(i = 0; i < saleItemPrice.length; i++) {
+                cy.log(saleItemPrice[i]);
+                saleItemsPrice += Number(saleItemPrice[i]);
+            }
+            cy.log("Sale price items total: " + saleItemsPrice);
+        })
     });
 })
