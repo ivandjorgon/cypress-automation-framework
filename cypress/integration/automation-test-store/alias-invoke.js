@@ -46,7 +46,12 @@ describe("Alias and invoke", () => {
                 cy.log(saleItemPrice[i]);
                 saleItemsPrice += Number(saleItemPrice[i]);
             }
+            itemsTotal += saleItemsPrice;
             cy.log("Sale price items total: " + saleItemsPrice);
+        })
+        .then(() => {
+            cy.log("The total price of all products: " + itemsTotal);
+            expect(itemsTotal).to.equal(652.60);
         })
     });
 })
