@@ -8,5 +8,10 @@ describe("Validate WebdriverUni homepage links", () => {
         cy.url().should('include', 'contactus')
 
         cy.go('back')
+        cy.reload()
+        //cy.reload(true) // reload without using cache
+
+        cy.go('forward')
+        cy.url().should('include', 'contactus')
     })
 })
