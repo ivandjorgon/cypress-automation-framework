@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ivandjorgon/cypress-automation-framework#readme",
   "devDependencies": {
-    "cypress": "^6.2.1",
+    "cypress": "^6.3.0",
     "cypress-xpath": "^1.6.1"
   }
 }
