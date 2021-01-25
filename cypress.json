@@ -4,8 +4,8 @@
   "pageLoadTimeout": 30000,
   "ignoreTestFiles": "**/other/*",
   "projectId": "9gexbp",
-
-  "env": {
-      "first_name": "sarah"
-  }
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+    "configFile": "reporter-config.json"
+    }
 }
