@@ -18,6 +18,9 @@
   "homepage": "https://github.com/ivandjorgon/cypress-automation-framework#readme",
   "devDependencies": {
     "cypress": "^6.3.0",
-    "cypress-xpath": "^1.6.1"
+    "cypress-xpath": "^1.6.1",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
   }
 }
