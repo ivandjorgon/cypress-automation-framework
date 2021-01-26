@@ -1,6 +1,14 @@
 /// <reference types="Cypress" />
 
 describe("Test Contact Us form via WebdriverUni", () => {
+
+    before(function() {
+        cy.fixture('example').then(function(data) {
+            //this.data = data;
+            globalThis.data = data;
+        })
+    })
+
     it("Should be able to submit a successful submission via contact us form", () => {
         //cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html")
         cy.visit("http://www.webdriveruniversity.com")
