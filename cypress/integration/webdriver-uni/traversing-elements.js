@@ -37,7 +37,11 @@ describe("Traversing DOM elements in Cypress", () => {
         cy.get('.traversal-table > tbody > tr > td').first().should('contain', 'Andy')
     })
 
-    it.only("last() to retrieve the last DOM element within elements", () => {
+    it("last() to retrieve the last DOM element within elements", () => {
         cy.get('.traversal-table > tbody > tr > td').last().should('contain', 'Scott')
+    })
+
+    it.only("nextAll() to get all of the next sibling DOM elements within elements", () => {
+        cy.get('.traversal-drinks-list').contains('Tea').nextAll().should('have.length', 3)
     })
 })
