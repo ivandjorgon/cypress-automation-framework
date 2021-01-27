@@ -7,6 +7,11 @@ describe("Test mouse actions", () => {
         cy.get('#actions').scrollIntoView().invoke('removeAttr', 'target').click({force:true})
     })
 
+    after(() => {
+        // runs once after all tests in the block
+        cy.visit("http://www.webdriveruniversity.com")
+    })
+
     it("Drag and drop a draggable item", () => {
         cy.get('#draggable').trigger('mousedown', {which: 1})
         cy.get('#droppable').trigger('mousemove').trigger('mouseup', {force:true})
@@ -20,6 +25,7 @@ describe("Test mouse actions", () => {
         cy.get('#click-box').trigger('mousedown', {which :1}).then(($element) => {
             expect($element).to.have.css('background-color', 'rgb(0, 255, 0)')
         })
-        //click({release:true}).contains('Dont release me')
+        // Release click
+        cy.get('#click-box').click({release:true}).contains('Dont release me')
     })
 })
