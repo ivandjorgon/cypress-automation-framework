@@ -25,7 +25,11 @@ describe("Traversing DOM elements in Cypress", () => {
         cy.get('.traversal-drinks-list > *').eq(4).should('contain', 'Sugar')
     })
 
-    it.only("filter() to retrieve DOM elements that match a specific selector", () => {
+    it("filter() to retrieve DOM elements that match a specific selector", () => {
+        cy.get('.btn-group-toggle > *').filter('.active').should('contain', 'Button-1')
+    })
+
+    it.only("find() to retrieve DOM elements of a given selector", () => {
         cy.get('.btn-group-toggle > *').filter('.active').should('contain', 'Button-1')
     })
 })
