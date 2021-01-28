@@ -30,7 +30,7 @@ describe("Test Contact Us form via WebdriverUni", () => {
         // cy.get('#contact_reply > h1').should('have.text', 'Thank You for your Message!')
         // or cy.get('h1').should('have.text', 'Thank You for your Message!')
         // cy.contains("Thank You for your Message!")
-        cy.webdriverUni_ContactForm_Submission(data.first_name, data.last_name, data.email, "Add test comment", 'h1', 'Thank You for your Message!');
+        cy.webdriverUni_ContactForm_Submission(Cypress.env("first_name"), data.last_name, data.email, "Add test comment", 'h1', 'Thank You for your Message!');
     })
 
     it("Should not be able to submit a successful submission via contact us form as all fields are mandatory", () => {
