@@ -7,10 +7,10 @@ describe("Traversing DOM elements in Cypress", () => {
         cy.get('#data-table').invoke('removeAttr', 'target').click({force:true})
     })
 
-    //after(() => {
+    after(() => {
         // Runs once after all tests in the block
-        //cy.visit("http://www.webdriveruniversity.com")
-    //})
+        cy.visit("http://www.webdriveruniversity.com")
+    })
 
     it("children() to get the children of DOM elements", () => {
         cy.get('.traversal-breadcrumb').children('.active').should('contain', 'Contact Us')
@@ -49,7 +49,31 @@ describe("Traversing DOM elements in Cypress", () => {
         cy.get('#coffee').nextUntil('#milk')
     })
 
-    it.only("not() to remove DOM elements from the set of elements", () => {
+    it("not() to remove DOM elements from the set of elements", () => {
         cy.get('.traversal-button-states > button').not('.disabled').should('not.have.class', 'disabled')
+    })
+
+    it("parent() to get parent DOM element of elements", () => {
+        cy.get('.traversal-mark').parent().should('contain', 'Lorem ipsum dolor sit')
+    })
+
+    it("parents() to get parents DOM element of elements", () => {
+        cy.get('.traversal-cite').parents().should('match', 'blockquote')
+    })
+
+    it("prev() to get the previous sibling DOM element within elements", () => {
+        cy.get('#sugar').prev().should('have.id', 'espresso').contains('Espresso')
+    })
+
+    it("prevAll() to get all previous sibling DOM elements within elements", () => {
+        cy.get('.sales').prevAll().should('have.length', 2)
+    })
+
+    it("prevUntil() to get all previous sibling DOM elements within elements until other element", () => {
+        cy.get('#veggie').prevUntil('#fruits').should('have.length', 5)
+    })
+
+    it("siblings() to get all sibling DOM elements of elements", () => {
+        cy.get('.traversal-button-other-states .active').siblings().should('have.length', 3)
     })
 })
