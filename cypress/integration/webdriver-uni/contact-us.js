@@ -1,4 +1,5 @@
 import HomePage_PO from '../../support/pageObjects/webdriver-uni/Homepage_PO'
+import Contact_Us_PO from '../../support/pageObjects/webdriver-uni/Contact_Us_PO'
 /// <reference types="Cypress" />
 
 describe("Test Contact Us form via WebdriverUni", () => {
@@ -16,6 +17,7 @@ describe("Test Contact Us form via WebdriverUni", () => {
         const homepage_PO = new HomePage_PO();
         homepage_PO.visitHomepage();
         homepage_PO.clickOn_ContactUs_Button();
+        //const contact_PO = new Contact_Us_PO();
     })
 
     it("Should be able to submit a successful submission via contact us form", () => {
@@ -34,7 +36,9 @@ describe("Test Contact Us form via WebdriverUni", () => {
         // cy.get('#contact_reply > h1').should('have.text', 'Thank You for your Message!')
         // or cy.get('h1').should('have.text', 'Thank You for your Message!')
         // cy.contains("Thank You for your Message!")
-        cy.webdriverUni_ContactForm_Submission(Cypress.env("first_name"), data.last_name, data.email, "Add test comment", 'h1', 'Thank You for your Message!');
+        //cy.webdriverUni_ContactForm_Submission(Cypress.env("first_name"), data.last_name, data.email, "Add test comment", 'h1', 'Thank You for your Message!');
+        const contact_Us_PO = new Contact_Us_PO();
+        contact_Us_PO.contactForm_Submission(Cypress.env("first_name"), data.last_name, data.email, "Add test comment", "h1", "Thank You for your Message!");
     })
 
     it("Should not be able to submit a successful submission via contact us form as all fields are mandatory", () => {
