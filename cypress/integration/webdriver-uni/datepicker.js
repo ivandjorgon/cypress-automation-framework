@@ -9,8 +9,8 @@ describe("Test Datepicker via webdriveruni", () => {
         date.setDate(date.getDate());
         cy.log(date.getDate()) // get current day
 
-        let date = new Date();
-        date.setDate(date.getDate() + 5)
-        cy.log(date.getDate()) // get current day + 5
+        let date2 = new Date();
+        date2.setDate(date.getDate() + 5)
+        cy.log(date2.getDate()) // get current day + 5
     })
 })
