@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
-describe("Handling IFrame and Modals", () => {
-    it("Handle webdriveruni iframe and modal", () => {
+describe("Test Datepicker via webdriveruni", () => {
+    it("Select date from the datepicker", () => {
         cy.visit("http://www.webdriveruniversity.com")
-        cy.get('#iframe').invoke('removeAttr', 'target').click({force:true})
+        cy.get('#datepicker').invoke('removeAttr', 'target').click({force:true})
     })
 })
