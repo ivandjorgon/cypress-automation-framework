@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ivandjorgon/cypress-automation-framework#readme",
   "devDependencies": {
     "cypress": "^6.4.0",
+    "cypress-file-upload": "^5.0.2",
     "cypress-multi-reporters": "^1.4.0",
     "cypress-xpath": "^1.6.1",
     "mocha": "^8.2.1",
