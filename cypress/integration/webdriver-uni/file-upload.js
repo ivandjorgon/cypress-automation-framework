@@ -39,6 +39,25 @@ describe("Test File Upload via webdriveruni", () => {
         cy.get("#submit-button").click();
     })
 
+    it("Upload a jpg file....", () => {
+        cy.visit("http://www.webdriveruniversity.com")
+        cy.get('#file-upload').invoke('removeAttr', 'target').click({force:true})
+
+        cy.fixture("gallery8.jpg", "base64").then(fileContent => {
+            cy.get("#myFile").attachFile(
+                {
+                    fileContent,
+                    fileName: "gallery8.jpg",
+                    mimeType: "image/jpg"
+                },
+                {
+                    uploadType: "input"
+                }
+            )
+        })
+        cy.get("#submit-button").click();
+    })
+
     it("Upload no file....", () => {
         cy.visit("http://www.webdriveruniversity.com")
         cy.get('#file-upload').invoke('removeAttr', 'target').click({force:true})
