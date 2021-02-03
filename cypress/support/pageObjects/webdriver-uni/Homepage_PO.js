@@ -6,5 +6,9 @@ class HomePage_PO {
     clickOn_ContactUs_Button() {
         cy.get('#contact-us').invoke('removeAttr', 'target').click({ force: true });
     }
+
+    clickOn_FileUpload_Button() {
+        cy.get('#file-upload').invoke('removeAttr', 'target').click({ force:true });
+    }
 }
 export default HomePage_PO;
