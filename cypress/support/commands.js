@@ -55,3 +55,4 @@ Cypress.Commands.add("webdriverUni_ContactForm_Submission", (firstName, lastName
 
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+import 'cypress-file-upload';
