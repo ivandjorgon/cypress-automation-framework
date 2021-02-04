@@ -6,7 +6,7 @@ class Contact_Us_PO {
         cy.get('textarea.feedback-input').type(comment);
         cy.get('[type="submit"]').click();
         cy.get($selector).contains(textToLocate, {timeout: 60000});
-        cy.screenshot();
+        //cy.screenshot();
         cy.screenshot("Made a contact us form submission");
     }
 }
