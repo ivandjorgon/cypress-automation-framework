@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "triggerAllTests-autoTestStore": "npx cypress run --spec cypress/integration/automation-test-store/*",
     "triggerAllTests-staging": "npx cypress run --env configFile=staging"
   },
   "repository": {
