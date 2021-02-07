@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "triggerAllTests-autoTestStore": "npx cypress run --spec cypress/integration/automation-test-store/*",
-    "triggerAllTests-staging": "npx cypress run --env configFile=staging"
+    "triggerAllTests-staging": "npx cypress run --env configFile=staging",
+    "cypress-multi-browser": "npm run triggerAllTests-autoTestStore -- --browser electron --headed & npm run triggerAllTests-autoTestStore -- --browser chrome --headed"
   },
   "repository": {
     "type": "git",
