@@ -4,4 +4,4 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run
+      - npx cypress run --spec cypress/integration/automation-test-store/*
